@@ -1,0 +1,12 @@
+# Core ML and vision stack
+torch           
+ultralytics     # YOLO models and Python API
+opencv-python   # OpenCV with GUI support
+numpy
+Pillow
+
+# Web app
+streamlit
+
+# Optional but useful
+python-dotenv
