@@ -19,10 +19,6 @@ The system is engineered to handle:
 
 ---
 
-## 📸 Demo
-
-*( `![Demo App](D:\ai\CodeAlpha\Task_3_Object_Detection\Demo\Screenshot 2026-01-13 140859.png)`)*
-
 ---
 
 ## ✨ Key Features
