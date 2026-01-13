@@ -21,7 +21,7 @@ The system is engineered to handle:
 
 ## 📸 Demo
 
-*(Place a GIF or Screenshot of your app running here. Example: `![Demo App](Demo/screenshot.png)`)*
+*( `![Demo App](D:\ai\CodeAlpha\Task_3_Object_Detection\Demo\Screenshot 2026-01-13 140859.png)`)*
 
 ---
 
