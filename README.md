@@ -1,162 +1,155 @@
-# Real-Time Object Detection and Tracking (YOLOv8 + Streamlit)
+# 👁️ Real-Time Object Detection & Tracking (YOLOv8 + Streamlit)
 
-This repository contains a complete real-time object detection and tracking pipeline
-built with **YOLOv8**, **OpenCV**, and **Streamlit**. The system can run on:
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer_Vision-green?style=for-the-badge&logo=opencv&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
 
-- Live webcam feed.
-- Uploaded video files.
-- Jupyter Notebook for experimentation and development.
+> **CodeAlpha AI Vision Internship Project**
 
-The project is designed as a clean, extensible reference implementation for
-computer vision applications such as surveillance, traffic monitoring, and general
-object-tracking demos.
+## 📖 Overview
 
----
+This repository hosts a robust **Computer Vision pipeline** designed for real-time object detection and tracking. Built with the power of **YOLOv8** (You Only Look Once) and **OpenCV**, wrapped in a user-friendly **Streamlit** dashboard.
 
-## 1. Project Features
-
-- Real-time object detection using a pretrained **YOLOv8** model.
-- Basic multi-object tracking using a centroid-based tracking strategy.
-- Web interface built with **Streamlit**:
-  - Live webcam mode.
-  - Video upload mode with processed output.
-- Jupyter Notebook (`main_code.ipynb`) for step-by-step exploration.
-- Sample test videos and demo assets included.
+The system is engineered to handle:
+- 🔴 **Live Webcam Feed:** Low-latency inference for real-time monitoring.
+- 📂 **Video File Processing:** Upload videos for frame-by-frame analysis and tracking.
+- 🎯 **Object Tracking:** Implements centroid-based tracking to maintain object IDs across frames.
 
 ---
 
-## 2. Repository Structure
+## 📸 Demo
+
+*(Place a GIF or Screenshot of your app running here. Example: `![Demo App](Demo/screenshot.png)`)*
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+| :--- | :--- |
+| **State-of-the-Art Detection** | Utilizes `YOLOv8` (Medium/Nano) for high accuracy and speed. |
+| **Smart Tracking** | Custom centroid tracking algorithm to trace object paths. |
+| **Interactive UI** | Controlled via **Streamlit** allow users to toggle sources and adjust confidence thresholds dynamically. |
+| **Development Notebook** | Includes `main_code.ipynb` for deep-dive experimentation and debugging. |
+
+---
+
+## 📂 Repository Structure
 
 ```text
-.
-├── app.py                 # Streamlit web application
-├── main_code.ipynb        # Jupyter Notebook (detection + tracking pipeline)
-├── requirements.txt       # Python dependencies
-├── yolov8m.pt             # Pretrained YOLOv8 model weights
-├── README.md              # Project documentation (this file)
-├── LICENSE                # Project license (MIT)
-│
-├── test/                  # Test assets
-│   ├── video_test_1.mp4   # Sample test video 1
-│   └── video_test_2.mp4   # Sample test video 2
-│
-└── Demo/                  # Demo artifacts
-    ├── demo_video.mp4     # Demo video showing the system in action
-    └── screenshot.png     # Screenshot of the application UI
-```
+├── app.py                  # 🚀 Main Streamlit Application
+├── main_code.ipynb         # 📓 Jupyter Notebook (Development & Experiments)
+├── requirements.txt        # 📦 Dependencies list
+├── yolov8m.pt              # 🧠 Pre-trained YOLOv8 Model Weights
+├── test/                   # 🧪 Test Assets
+│   ├── video_test_1.mp4
+│   └── video_test_2.mp4
+├── Demo/                   # 🖼️ Demo Assets (Screenshots/GIFs)
+│   └── screenshot.png
+└── README.md               # 📄 Project Documentation
 
-> Note: The exact filenames under `test/` and `Demo/` can be adjusted as needed,  
-> but the folder structure is kept consistent for clarity.
+```
 
 ---
 
-## 3. Installation
+## 🛠️ Installation
 
-1. Clone or download this repository.
+Follow these steps to set up the environment locally:
 
-2. Create and activate a virtual environment (recommended):
+**1. Clone the Repository**
 
 ```bash
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# Linux / macOS
-source venv/bin/activate
+git clone [https://github.com/YourUsername/RepoName.git](https://github.com/YourUsername/RepoName.git)
+cd RepoName
+
 ```
 
-3. Install dependencies:
+**2. Create a Virtual Environment (Recommended)**
+
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Linux / macOS
+source venv/bin/activate
+
+```
+
+**3. Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
+
 ```
 
-Make sure your environment has a compatible version of **PyTorch** with GPU support
-if you plan to run real-time inference on high-resolution video.
+> *Note: Ensure you have a CUDA-compatible GPU if you intend to run high-resolution real-time inference, though CPU is sufficient for testing.*
 
 ---
 
-## 4. Running the Streamlit App
+## 🚀 Usage
 
-The `app.py` file exposes a simple web interface with two main modes:
-**Live Webcam** and **Video Upload**.
+### 1. Running the Web App
+
+Launch the Streamlit dashboard:
 
 ```bash
 streamlit run app.py
+
 ```
 
-Once the app is running:
+* Open your browser at `http://localhost:8501`.
+* **Sidebar Options:**
+* Choose **"Live Webcam"** for real-time detection.
+* Choose **"Video Upload"** to process `mp4`, `avi`, or `mov` files.
+* Adjust the **Confidence Threshold** slider to filter weak detections.
 
-- Open the URL shown in the terminal (usually `http://localhost:8501`).
-- Use the sidebar to:
-  - Select the mode: `Live Webcam` or `Video Upload`.
-  - Adjust the confidence threshold for detections.
-- In **Live Webcam** mode:
-  - Start the webcam stream and observe real-time detection and tracking.
-- In **Video Upload** mode:
-  - Upload a video file.
-  - Run detection and tracking.
-  - Preview the processed result directly in the browser.
 
-The header shows the project identity:  
-`CodeAlpha AI Vision – Real-Time Object Detection and Tracking`.
 
----
+### 2. Jupyter Notebook
 
-## 5. Jupyter Notebook (`main_code.ipynb`)
+To understand the tracking logic or retrain the model:
 
-The notebook contains a step-by-step implementation of:
+```bash
+jupyter notebook main_code.ipynb
 
-1. Environment checks and imports.
-2. Model loading and configuration (YOLOv8).
-3. Utility functions for centroid tracking.
-4. Real-time webcam detection and tracking loop.
-5. Video file processing and result export.
-
-It is useful for:
-- Understanding the underlying pipeline.
-- Experimenting with different model variants (e.g., `yolov8n.pt` vs `yolov8m.pt`).
-- Customizing the tracking logic or visualization.
+```
 
 ---
 
-## 6. Testing
+## 🏗️ Tech Stack
 
-You can quickly validate the pipeline using the videos in the `test/` folder:
+This project relies on the following key technologies:
 
-1. Start the Streamlit app.
-2. Switch to **Video Upload** mode.
-3. Upload one of the test videos, for example:
-   - `test/video_test_1.mp4`
-   - `test/video_test_2.mp4`
-4. Run detection and tracking and inspect the resulting video.
-
-The `Demo/` folder includes a pre-generated demo video and screenshots to show
-expected behavior and UI layout.
+* **Core:** Python 3.x
+* **Deep Learning:** PyTorch, Ultralytics YOLOv8
+* **Computer Vision:** OpenCV (`cv2`)
+* **Web Framework:** Streamlit
+* **Data Manipulation:** NumPy, Pandas
 
 ---
 
-## 7. Technologies and Tags
+## 🤝 Contributing
 
-Core technologies and concepts used in this project:
+Contributions, issues, and feature requests are welcome!
 
-- **YOLOv8**, **Ultralytics**, **Object Detection**
-- **Multi-Object Tracking**, **Centroid Tracking**
-- **OpenCV**, **Computer Vision**
-- **Streamlit**, **Web App**, **Real-Time Inference**
-- **Python**, **PyTorch**, **Deep Learning**
-- **Webcam Processing**, **Video Analytics**, **AI Demo**
-
-These keywords describe the main focus areas and can be used as tags for
-GitHub, portfolio entries, or documentation.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 8. License
+## 📜 License
 
-This project is released under the **MIT License**.  
-You are free to use, modify, and distribute the code, subject to the terms
-described in the `LICENSE` file.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-[1](https://ppl-ai-file-upload.s3.amazonaws.com/connectors/google_drive/1lkjnZtlO8D2XAYZ1sIml6-dqB6ItYxk0sKDpcyw4l-w/e3c0a92d-5860-4704-9b1a-e098d7c7b469/Artificial-Intelligence-Tasks-Instructions-CodeAlpha.md)
-[2](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/157424363/7ce71c98-da18-431d-bb50-54a1810aa2df/image.jpg)
-[3](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/157424363/df8042ce-7c16-4c0e-a27c-c295c42023a8/image.jpg)
+---
+
+<p align="center">
+Developed by <strong>Eslam Alsaeed</strong> for CodeAlpha Internship
+</p>
+
