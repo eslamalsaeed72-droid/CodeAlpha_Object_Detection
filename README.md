@@ -57,8 +57,8 @@ Follow these steps to set up the environment locally:
 **1. Clone the Repository**
 
 ```bash
-git clone [https://github.com/YourUsername/RepoName.git](https://github.com/YourUsername/RepoName.git)
-cd RepoName
+git clone [https://github.com/eslamalsaeed72-droid/CodeAlpha_Object_Detection.git](https://github.com/eslamalsaeed72-droid/CodeAlpha_Object_Detection.git)
+cd CodeAlpha_Object_Detection
 
 ```
 
